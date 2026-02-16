@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MizaDispo - Services à la personne en Île-de-France : accompagnement personnes âgées et handicapées, ménage, petits travaux, transport. Basés à Orsay (91).">
-    <meta name="keywords" content="services à la personne, aide à domicile, accompagnement, personnes âgées, handicap, ménage, petits travaux, transport">
-    <title>MizaDispo - Services à la Personne</title>
+    <meta name="description" content="MizaDispo Groupe - Services à la personne, Travaux & Rénovation, Débarras & Nettoyage professionnel en Île-de-France. Basés à Orsay (91).">
+    <meta name="keywords" content="MizaDispo, services à la personne, travaux rénovation, débarras, nettoyage, Île-de-France, Orsay">
+    <title>MizaDispo - Groupe de Services</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,15 +16,14 @@
     <!-- Header -->
     <header class="header" id="header">
         <div class="container">
-            <a href="#accueil" class="logo">
+            <a href="index.html" class="logo">
                 <span class="logo-miza">Miza</span><span class="logo-dispo">Dispo</span>
             </a>
             <nav class="nav" id="nav">
-                <a href="#accueil" class="nav-link">Accueil</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#apropos" class="nav-link">À propos</a>
-                <a href="#temoignages" class="nav-link">Témoignages</a>
-                <a href="#zone" class="nav-link">Zone d'intervention</a>
+                <a href="index.html" class="nav-link active">Accueil</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="travaux.html" class="nav-link">Travaux</a>
+                <a href="debarras.html" class="nav-link">Débarras</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
             <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -39,239 +38,99 @@
     <section class="hero" id="accueil">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
+            <p class="hero-tag">Groupe MizaDispo</p>
             <h1 class="hero-title">
-                Votre quotidien, <span class="highlight">notre priorité</span>
+                Tous vos besoins, <span class="highlight">une seule équipe</span>
             </h1>
             <p class="hero-subtitle">
-                Services à la personne de confiance. Accompagnement, aide à domicile, ménage, petits travaux...
-                Nous sommes là pour vous simplifier la vie.
+                Services à la personne, travaux & rénovation, débarras & nettoyage professionnel.
+                MizaDispo, c'est un groupe complet à votre service en Île-de-France.
             </p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Contactez-nous</a>
-                <a href="#services" class="btn btn-outline">Nos services</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Disponibles</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">7j/7</span>
-                    <span class="stat-label">À votre écoute</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Satisfaction</span>
-                </div>
+                <a href="#branches" class="btn btn-primary">Découvrir nos branches</a>
+                <a href="#contact" class="btn btn-outline">Contactez-nous</a>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
-    <section class="services" id="services">
+    <!-- Branches -->
+    <section class="branches" id="branches">
         <div class="container">
-            <h2 class="section-title">Nos <span class="highlight">Services</span></h2>
-            <p class="section-subtitle">Des prestations adaptées à vos besoins, réalisées par des professionnels bienveillants et qualifiés.</p>
+            <h2 class="section-title">Nos <span class="highlight">3 branches</span></h2>
+            <p class="section-subtitle">Un groupe, trois expertises. Choisissez le service qui correspond à votre besoin.</p>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">👴</div>
-                    <h3>Accompagnement personnes âgées</h3>
-                    <p>Présence attentive et bienveillante pour vos proches. Aide au quotidien, compagnie et soutien moral.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">♿</div>
-                    <h3>Accompagnement personnes handicapées</h3>
-                    <p>Assistance personnalisée et adaptée. Nous vous accompagnons dans toutes vos activités avec respect et professionnalisme.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🚗</div>
-                    <h3>Transport & accompagnement</h3>
-                    <p>Courses, rendez-vous médicaux, démarches administratives. Nous vous conduisons où vous en avez besoin.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🛒</div>
-                    <h3>Aide aux courses</h3>
-                    <p>Accompagnement ou livraison de vos courses. Nous vous aidons à faire vos achats en toute sérénité.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Petits travaux & bricolage</h3>
-                    <p>Montage de meubles, réparations, installations diverses. Des interventions rapides et soignées.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🧹</div>
-                    <h3>Ménage & nettoyage</h3>
-                    <p>Entretien régulier ou ponctuel de votre domicile. Un intérieur propre et sain, sans effort de votre part.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">📦</div>
-                    <h3>Débarras & déménagement léger</h3>
-                    <p>Évacuation d'encombrants, tri, rangement. Nous vous libérons de ce qui vous encombre.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🤗</div>
-                    <h3>Compagnie pour personnes seules</h3>
-                    <p>Présence chaleureuse, conversations, activités partagées. Rompre l'isolement et apporter du réconfort au quotidien.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Aide informatique & numérique</h3>
-                    <p>Installation, dépannage, initiation. Nous vous aidons à maîtriser vos outils numériques.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🌿</div>
-                    <h3>Jardinage & entretien extérieur</h3>
-                    <p>Tonte, taille, désherbage, entretien de vos espaces verts. Un jardin soigné toute l'année.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- À propos -->
-    <section class="apropos" id="apropos">
-        <div class="container">
-            <h2 class="section-title">À <span class="highlight">propos</span></h2>
-            <div class="apropos-content">
-                <div class="apropos-text">
-                    <h3>MizaDispo, votre partenaire du quotidien</h3>
-                    <p>
-                        Chez <strong>MizaDispo</strong>, nous croyons que chacun mérite une aide de qualité,
-                        accessible et humaine. Notre équipe de professionnels dévoués met tout en œuvre
-                        pour faciliter votre quotidien et celui de vos proches.
-                    </p>
-                    <p>
-                        Que vous ayez besoin d'un accompagnement pour une personne âgée, d'une aide au ménage,
-                        de petits travaux ou simplement d'un coup de main, nous sommes là pour vous.
-                        Disponibles et à l'écoute, nous nous adaptons à vos besoins spécifiques.
-                    </p>
-                    <div class="values">
-                        <div class="value">
-                            <span class="value-icon">💚</span>
-                            <div>
-                                <strong>Bienveillance</strong>
-                                <p>Un accompagnement humain et respectueux</p>
-                            </div>
-                        </div>
-                        <div class="value">
-                            <span class="value-icon">⭐</span>
-                            <div>
-                                <strong>Professionnalisme</strong>
-                                <p>Des intervenants qualifiés et de confiance</p>
-                            </div>
-                        </div>
-                        <div class="value">
-                            <span class="value-icon">🕐</span>
-                            <div>
-                                <strong>Disponibilité</strong>
-                                <p>À votre service quand vous en avez besoin</p>
-                            </div>
-                        </div>
-                        <div class="value">
-                            <span class="value-icon">🤝</span>
-                            <div>
-                                <strong>Confiance</strong>
-                                <p>Une relation basée sur la transparence</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="apropos-visual">
-                    <div class="apropos-card">
-                        <div class="apropos-card-icon">🏠</div>
-                        <h4>Notre mission</h4>
-                        <p>Rendre les services à la personne accessibles à tous, avec humanité et professionnalisme.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Témoignages -->
-    <section class="temoignages" id="temoignages">
-        <div class="container">
-            <h2 class="section-title">Ce que disent nos <span class="highlight">clients</span></h2>
-            <p class="section-subtitle">La satisfaction de nos clients est notre plus belle récompense.</p>
-
-            <div class="temoignages-grid">
-                <div class="temoignage-card">
-                    <div class="temoignage-stars">★★★★★</div>
-                    <p class="temoignage-text">
-                        "MizaDispo accompagne ma mère depuis plusieurs mois. L'équipe est formidable,
-                        toujours ponctuelle et très attentionnée. Je suis rassurée de savoir maman entre de bonnes mains."
-                    </p>
-                    <div class="temoignage-author">
-                        <div class="temoignage-avatar">S</div>
-                        <div>
-                            <strong>Sophie M.</strong>
-                            <span>Accompagnement personnes âgées</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="temoignage-card">
-                    <div class="temoignage-stars">★★★★★</div>
-                    <p class="temoignage-text">
-                        "Excellent service de ménage ! Mon appartement n'a jamais été aussi propre.
-                        L'intervenante est discrète, efficace et très agréable. Je recommande vivement."
-                    </p>
-                    <div class="temoignage-author">
-                        <div class="temoignage-avatar">M</div>
-                        <div>
-                            <strong>Marc D.</strong>
-                            <span>Ménage & nettoyage</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="temoignage-card">
-                    <div class="temoignage-stars">★★★★★</div>
-                    <p class="temoignage-text">
-                        "J'ai fait appel à MizaDispo pour un débarras et des petits travaux.
-                        Rapide, propre et pas cher. Le tout avec le sourire ! Merci à toute l'équipe."
-                    </p>
-                    <div class="temoignage-author">
-                        <div class="temoignage-avatar">F</div>
-                        <div>
-                            <strong>Fatima L.</strong>
-                            <span>Débarras & petits travaux</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Zone d'intervention -->
-    <section class="zone" id="zone">
-        <div class="container">
-            <h2 class="section-title">Zone d'<span class="highlight">intervention</span></h2>
-            <p class="section-subtitle">Basés à Orsay, nous intervenons sur toute l'Île-de-France.</p>
-
-            <div class="zone-content">
-                <div class="zone-map">
-                    <div class="zone-pin">📍</div>
-                    <div class="zone-radius"></div>
-                </div>
-                <div class="zone-info">
-                    <h3>Nous intervenons sur toute l'Île-de-France</h3>
-                    <p>Basés à Orsay, nous intervenons sur toute l'Île-de-France pour être au plus près de vos besoins.</p>
-                    <ul class="zone-list">
-                        <li>Toute l'Île-de-France (75, 77, 78, 91, 92, 93, 94, 95)</li>
-                        <li>Interventions rapides sous 24 à 48h</li>
-                        <li>Devis gratuit et sans engagement</li>
-                        <li>Déplacement inclus dans nos tarifs</li>
+            <div class="branches-grid">
+                <!-- Branche Services -->
+                <a href="services.html" class="branch-card">
+                    <div class="branch-icon">🤝</div>
+                    <h3>Services à la personne</h3>
+                    <p>Accompagnement personnes âgées et handicapées, aide aux courses, ménage, compagnie, aide informatique, jardinage...</p>
+                    <ul class="branch-list">
+                        <li>Accompagnement quotidien</li>
+                        <li>Aide à domicile</li>
+                        <li>Transport & courses</li>
+                        <li>Compagnie & bien-être</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Vérifier ma zone</a>
+                    <span class="branch-cta">Découvrir <span>→</span></span>
+                </a>
+
+                <!-- Branche Travaux -->
+                <a href="travaux.html" class="branch-card">
+                    <div class="branch-icon">🏗️</div>
+                    <h3>Travaux & Rénovation</h3>
+                    <p>Rénovation complète d'appartements et maisons, pose de parquet, peinture, plomberie, électricité, aménagement intérieur...</p>
+                    <ul class="branch-list">
+                        <li>Rénovation complète</li>
+                        <li>Pose de revêtements</li>
+                        <li>Plomberie & électricité</li>
+                        <li>Aménagement intérieur</li>
+                    </ul>
+                    <span class="branch-cta">Découvrir <span>→</span></span>
+                </a>
+
+                <!-- Branche Débarras -->
+                <a href="debarras.html" class="branch-card">
+                    <div class="branch-icon">🧹</div>
+                    <h3>Débarras & Nettoyage pro</h3>
+                    <p>Débarras gros volume, nettoyage fin de chantier, nettoyage après sinistre, évacuation d'encombrants, remise en état...</p>
+                    <ul class="branch-list">
+                        <li>Débarras caves & greniers</li>
+                        <li>Nettoyage fin de chantier</li>
+                        <li>Évacuation encombrants</li>
+                        <li>Remise en état de locaux</li>
+                    </ul>
+                    <span class="branch-cta">Découvrir <span>→</span></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi MizaDispo -->
+    <section class="why" id="pourquoi">
+        <div class="container">
+            <h2 class="section-title">Pourquoi <span class="highlight">MizaDispo</span> ?</h2>
+            <p class="section-subtitle">Un groupe de confiance, réactif et professionnel pour tous vos projets.</p>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <span class="why-icon">⚡</span>
+                    <h4>Réactivité</h4>
+                    <p>Intervention rapide sous 24 à 48h. Nous sommes disponibles 7j/7 pour répondre à vos demandes.</p>
+                </div>
+                <div class="why-card">
+                    <span class="why-icon">👷</span>
+                    <h4>Professionnalisme</h4>
+                    <p>Des équipes qualifiées et expérimentées dans chaque branche d'activité.</p>
+                </div>
+                <div class="why-card">
+                    <span class="why-icon">💰</span>
+                    <h4>Tarifs justes</h4>
+                    <p>Devis gratuit et transparent. Des prix compétitifs sans compromis sur la qualité.</p>
+                </div>
+                <div class="why-card">
+                    <span class="why-icon">📍</span>
+                    <h4>Île-de-France</h4>
+                    <p>Basés à Orsay (91), nous intervenons sur toute l'Île-de-France.</p>
                 </div>
             </div>
         </div>
@@ -280,8 +139,8 @@
     <!-- Contact -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Demande de <span class="highlight">devis</span></h2>
-            <p class="section-subtitle">Contactez-nous. Une question ? Un besoin ? N'hésitez pas, nous vous répondrons dans les plus brefs délais.</p>
+            <h2 class="section-title">Contactez <span class="highlight">le groupe</span></h2>
+            <p class="section-subtitle">Une question ? Un projet ? Contactez-nous, nous vous répondrons dans les plus brefs délais.</p>
 
             <div class="contact-content">
                 <form class="contact-form" id="contactForm" action="https://formsubmit.co/mizadispo.groupe@gmail.com" method="POST">
@@ -302,19 +161,13 @@
                         <input type="tel" id="phone" name="phone" placeholder="06 XX XX XX XX">
                     </div>
                     <div class="form-group">
-                        <label for="service">Service souhaité</label>
-                        <select id="service" name="service" required>
-                            <option value="">Choisir un service</option>
-                            <option value="accompagnement-age">Accompagnement personnes âgées</option>
-                            <option value="accompagnement-handicap">Accompagnement personnes handicapées</option>
-                            <option value="transport">Transport & accompagnement</option>
-                            <option value="courses">Aide aux courses</option>
-                            <option value="travaux">Petits travaux & bricolage</option>
-                            <option value="menage">Ménage & nettoyage</option>
-                            <option value="debarras">Débarras & déménagement léger</option>
-                            <option value="compagnie">Compagnie pour personnes seules</option>
-                            <option value="informatique">Aide informatique & numérique</option>
-                            <option value="jardinage">Jardinage & entretien extérieur</option>
+                        <label for="branche">Branche concernée</label>
+                        <select id="branche" name="branche" required>
+                            <option value="">Choisir une branche</option>
+                            <option value="services">Services à la personne</option>
+                            <option value="travaux">Travaux & Rénovation</option>
+                            <option value="debarras">Débarras & Nettoyage pro</option>
+                            <option value="autre">Autre / Je ne sais pas</option>
                         </select>
                     </div>
                     <div class="form-group form-group-full">
@@ -365,24 +218,22 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="#accueil" class="logo">
+                    <a href="index.html" class="logo">
                         <span class="logo-miza">Miza</span><span class="logo-dispo">Dispo</span>
                     </a>
-                    <p>Services à la personne de confiance. Votre quotidien, notre priorité.</p>
+                    <p>Groupe de services en Île-de-France. Services à la personne, travaux & rénovation, débarras & nettoyage professionnel.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Nos branches</h4>
+                    <a href="services.html">Services à la personne</a>
+                    <a href="travaux.html">Travaux & Rénovation</a>
+                    <a href="debarras.html">Débarras & Nettoyage</a>
                 </div>
                 <div class="footer-links">
                     <h4>Navigation</h4>
-                    <a href="#accueil">Accueil</a>
-                    <a href="#services">Services</a>
-                    <a href="#apropos">À propos</a>
+                    <a href="index.html">Accueil</a>
+                    <a href="#pourquoi">Pourquoi nous</a>
                     <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <a href="#services">Accompagnement</a>
-                    <a href="#services">Ménage</a>
-                    <a href="#services">Petits travaux</a>
-                    <a href="#services">Transport</a>
                 </div>
                 <div class="footer-links">
                     <h4>Légal</h4>
@@ -392,7 +243,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 MizaDispo - Tous droits réservés</p>
+                <p>&copy; 2026 MizaDispo Groupe - Tous droits réservés</p>
             </div>
         </div>
     </footer>

@@ -706,6 +706,27 @@ img {
     padding: 16px;
 }
 
+.contact-content:has(.contact-form-detailed) {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form-detailed {
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-section-title {
+    grid-column: 1 / -1;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--green);
+    margin-top: 8px;
+    margin-bottom: -4px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(139, 195, 74, 0.15);
+}
+
 .contact-info-card {
     background: var(--dark-light);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -794,6 +815,178 @@ img {
     font-size: 0.85rem;
 }
 
+/* ===== HERO SUB PAGES ===== */
+.hero-sub {
+    min-height: 70vh;
+    padding: 140px 0 80px;
+}
+
+.hero-tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--green);
+    margin-bottom: 16px;
+    padding: 8px 20px;
+    border: 1px solid rgba(139, 195, 74, 0.3);
+    border-radius: 50px;
+    background: rgba(139, 195, 74, 0.08);
+}
+
+/* ===== BRANCHES (index) ===== */
+.branches {
+    padding: 100px 0;
+    background: var(--dark);
+}
+
+.branches-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.branch-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--dark-light);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius);
+    padding: 40px 32px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.branch-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--green);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.branch-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(139, 195, 74, 0.3);
+    box-shadow: var(--shadow-green);
+}
+
+.branch-card:hover::before {
+    transform: scaleX(1);
+}
+
+.branch-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.branch-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--white);
+}
+
+.branch-card > p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.branch-list {
+    list-style: none;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.branch-list li {
+    padding: 6px 0;
+    color: var(--gray-light);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.branch-list li::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.branch-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--green);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.branch-card:hover .branch-cta span {
+    transform: translateX(4px);
+}
+
+.branch-cta span {
+    transition: var(--transition);
+}
+
+/* ===== WHY SECTION (index) ===== */
+.why {
+    padding: 100px 0;
+    background: var(--black);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.why-card {
+    text-align: center;
+    padding: 36px 24px;
+    background: var(--dark-light);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.why-card:hover {
+    border-color: rgba(139, 195, 74, 0.2);
+    transform: translateY(-3px);
+}
+
+.why-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.why-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--green);
+}
+
+.why-card p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
 /* ===== ANIMATIONS ===== */
 .fade-in {
     opacity: 0;
@@ -808,6 +1001,16 @@ img {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
+    .branches-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .apropos-content {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -865,12 +1068,21 @@ img {
         padding: 100px 0 60px;
     }
 
+    .hero-sub {
+        min-height: 60vh;
+        padding: 120px 0 60px;
+    }
+
     .hero-title {
         font-size: 2.2rem;
     }
 
     .hero-stats {
         gap: 24px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
     }
 
     .services-grid {
