@@ -126,17 +126,13 @@ img {
 }
 
 .logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
 }
 
-.logo-miza {
-    color: var(--white);
-}
-
-.logo-dispo {
-    color: var(--green);
+.logo-img {
+    height: 45px;
+    width: auto;
 }
 
 .nav {
