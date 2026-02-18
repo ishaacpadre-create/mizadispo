@@ -128,11 +128,28 @@ img {
 .logo {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .logo-img {
-    height: 45px;
-    width: auto;
+    height: 38px;
+    width: 38px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo-miza {
+    color: var(--white);
+}
+
+.logo-dispo {
+    color: var(--green);
 }
 
 .nav {
