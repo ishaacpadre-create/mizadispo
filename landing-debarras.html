@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Débarras gratuit en Île-de-France selon les objets récupérables. Devis gratuit en 24h. Appartements, maisons, caves, greniers.">
+    <meta name="robots" content="noindex">
+    <title>Débarras Gratuit en Île-de-France | MizaDispo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --black: #0a0a0a;
+            --dark: #1a1a1a;
+            --dark-light: #2a2a2a;
+            --gray: #888;
+            --gray-light: #ccc;
+            --white: #ffffff;
+            --green: #8BC34A;
+            --green-light: #9CCC65;
+            --green-dark: #7CB342;
+            --green-glow: rgba(139, 195, 74, 0.3);
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font);
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a { text-decoration: none; color: inherit; }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--green);
+            color: var(--black);
+            text-align: center;
+            padding: 10px 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .top-bar a {
+            color: var(--black);
+            text-decoration: underline;
+        }
+
+        /* ===== HEADER ===== */
+        .lp-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .lp-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .lp-logo img {
+            height: 40px;
+            width: 40px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .lp-logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+        .lp-logo-miza { color: var(--white); }
+        .lp-logo-dispo { color: var(--green); }
+        .lp-phone-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--green);
+            color: var(--black);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .lp-phone-btn:hover {
+            background: var(--green-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 24px rgba(139, 195, 74, 0.3);
+        }
+
+        /* ===== HERO ===== */
+        .lp-hero {
+            padding: 60px 24px 80px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .lp-badge {
+            display: inline-block;
+            background: rgba(139, 195, 74, 0.1);
+            border: 1px solid rgba(139, 195, 74, 0.3);
+            color: var(--green);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+        }
+        .lp-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .lp-hero h1 .green { color: var(--green); }
+        .lp-hero p {
+            font-size: 1.15rem;
+            color: var(--gray-light);
+            max-width: 600px;
+            margin: 0 auto 36px;
+            line-height: 1.8;
+        }
+        .lp-hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            font-family: var(--font);
+        }
+        .btn-green {
+            background: var(--green);
+            color: var(--black);
+        }
+        .btn-green:hover {
+            background: var(--green-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 24px rgba(139, 195, 74, 0.3);
+        }
+        .btn-white {
+            background: transparent;
+            color: var(--white);
+            border-color: rgba(255,255,255,0.2);
+        }
+        .btn-white:hover {
+            border-color: var(--green);
+            color: var(--green);
+            transform: translateY(-2px);
+        }
+
+        /* ===== TRUST ===== */
+        .lp-trust {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 0 24px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .lp-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gray-light);
+            font-size: 0.95rem;
+        }
+        .lp-trust-icon {
+            font-size: 1.4rem;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .lp-how {
+            background: var(--dark);
+            padding: 80px 24px;
+        }
+        .lp-how-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .lp-section-title {
+            text-align: center;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800;
+            margin-bottom: 48px;
+        }
+        .lp-section-title .green { color: var(--green); }
+        .lp-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .lp-step {
+            text-align: center;
+            padding: 32px 20px;
+            background: var(--dark-light);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .lp-step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: var(--green);
+            color: var(--black);
+            border-radius: 50%;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .lp-step h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        .lp-step p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ===== 3 TYPES ===== */
+        .lp-types {
+            padding: 80px 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .lp-types-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-bottom: 40px;
+        }
+        .lp-type-card {
+            text-align: center;
+            padding: 36px 24px 32px;
+            background: var(--dark);
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+        }
+        .lp-type-card:hover {
+            border-color: rgba(139, 195, 74, 0.2);
+            transform: translateY(-4px);
+        }
+        .lp-type-card.featured {
+            border-color: rgba(139, 195, 74, 0.3);
+            background: linear-gradient(135deg, var(--dark) 0%, rgba(139, 195, 74, 0.05) 100%);
+        }
+        .lp-type-emoji {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .lp-type-card h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .lp-type-card.featured h3 {
+            color: var(--green);
+        }
+        .lp-type-card p {
+            color: var(--gray-light);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        .lp-type-card p strong {
+            color: var(--white);
+        }
+        .lp-asso {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: var(--dark);
+            border: 1px solid rgba(139, 195, 74, 0.2);
+            border-radius: 14px;
+            padding: 28px 32px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .lp-asso-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        .lp-asso h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--green);
+            margin-bottom: 4px;
+        }
+        .lp-asso p {
+            color: var(--gray-light);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ===== SERVICES ===== */
+        .lp-services {
+            padding: 80px 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .lp-services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .lp-service {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 20px;
+            background: var(--dark);
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .lp-service-icon { font-size: 1.6rem; flex-shrink: 0; }
+        .lp-service h4 { font-size: 0.95rem; font-weight: 600; }
+        .lp-service p { font-size: 0.85rem; color: var(--gray); margin-top: 2px; }
+
+        /* ===== FORM ===== */
+        .lp-form-section {
+            background: var(--dark);
+            padding: 80px 24px;
+        }
+        .lp-form-inner {
+            max-width: 550px;
+            margin: 0 auto;
+            background: var(--dark-light);
+            border: 1px solid rgba(139, 195, 74, 0.2);
+            border-radius: 16px;
+            padding: 40px 32px;
+        }
+        .lp-form-inner h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        .lp-form-inner h2 .green { color: var(--green); }
+        .lp-form-subtitle {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 28px;
+        }
+        .lp-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .lp-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .lp-form label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gray-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        .lp-form input,
+        .lp-form select,
+        .lp-form textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background: var(--dark);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: var(--white);
+            font-size: 1rem;
+            font-family: var(--font);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        .lp-form input::placeholder,
+        .lp-form textarea::placeholder { color: var(--gray); }
+        .lp-form input:focus,
+        .lp-form select:focus,
+        .lp-form textarea:focus {
+            border-color: var(--green);
+            box-shadow: 0 0 0 3px var(--green-glow);
+        }
+        .lp-form select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+        }
+        .lp-form select option { background: var(--dark); color: var(--white); }
+        .lp-form-submit {
+            width: 100%;
+            padding: 16px;
+            background: var(--green);
+            color: var(--black);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: var(--font);
+            transition: all 0.3s ease;
+            margin-top: 8px;
+        }
+        .lp-form-submit:hover {
+            background: var(--green-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 24px rgba(139, 195, 74, 0.3);
+        }
+
+        /* ===== PHONE STICKY ===== */
+        .lp-sticky-phone {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--green);
+            color: var(--black);
+            text-align: center;
+            padding: 14px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            z-index: 1000;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== FOOTER ===== */
+        .lp-footer {
+            text-align: center;
+            padding: 24px;
+            color: var(--gray);
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .lp-steps { grid-template-columns: 1fr; }
+            .lp-types-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 40px; }
+            .lp-asso { flex-direction: column; text-align: center; gap: 12px; }
+            .lp-services-grid { grid-template-columns: 1fr; }
+            .lp-form-row { grid-template-columns: 1fr; }
+            .lp-form-inner { padding: 28px 20px; }
+            .lp-phone-btn span.phone-text { display: none; }
+            .lp-sticky-phone { display: flex; }
+            .lp-trust { gap: 20px; }
+            .lp-hero { padding: 40px 20px 60px; }
+        }
+        @media (max-width: 480px) {
+            .lp-hero h1 { font-size: 1.7rem; }
+            .lp-hero-cta { flex-direction: column; align-items: center; }
+            .btn-cta { width: 100%; max-width: 300px; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        Devis gratuit en 24h — Intervention rapide en Île-de-France — <a href="tel:0687299630">Appelez le 06 87 29 96 30</a>
+    </div>
+
+    <!-- Header -->
+    <header class="lp-header">
+        <div class="lp-logo">
+            <img src="img/logo.png" alt="MizaDispo">
+            <span class="lp-logo-text"><span class="lp-logo-miza">Miza</span><span class="lp-logo-dispo">Dispo</span></span>
+        </div>
+        <a href="tel:0687299630" class="lp-phone-btn">
+            📞 <span class="phone-text">06 87 29 96 30</span>
+        </a>
+    </header>
+
+    <!-- Hero -->
+    <section class="lp-hero">
+        <div class="lp-badge">Débarras en Île-de-France</div>
+        <h1>Votre débarras peut être <span class="green">gratuit</span></h1>
+        <p>
+            Selon la valeur des objets récupérables, votre débarras peut être partiellement ou totalement pris en charge.
+            On évalue, on débarrasse, vous ne payez que le nécessaire.
+        </p>
+        <div class="lp-hero-cta">
+            <a href="#devis" class="btn-cta btn-green">Devis gratuit en 2 min</a>
+            <a href="tel:0687299630" class="btn-cta btn-white">📞 Appeler maintenant</a>
+        </div>
+    </section>
+
+    <!-- Trust -->
+    <div class="lp-trust">
+        <div class="lp-trust-item">
+            <span class="lp-trust-icon">✅</span>
+            <span>Devis gratuit</span>
+        </div>
+        <div class="lp-trust-item">
+            <span class="lp-trust-icon">⚡</span>
+            <span>Intervention sous 48h</span>
+        </div>
+        <div class="lp-trust-item">
+            <span class="lp-trust-icon">🌍</span>
+            <span>Toute l'Île-de-France</span>
+        </div>
+        <div class="lp-trust-item">
+            <span class="lp-trust-icon">♻️</span>
+            <span>Recyclage responsable</span>
+        </div>
+    </div>
+
+    <!-- How it works -->
+    <section class="lp-how">
+        <div class="lp-how-inner">
+            <h2 class="lp-section-title">Comment ça <span class="green">marche ?</span></h2>
+            <div class="lp-steps">
+                <div class="lp-step">
+                    <div class="lp-step-number">1</div>
+                    <h3>Vous nous contactez</h3>
+                    <p>Par téléphone ou via le formulaire. Décrivez-nous ce qu'il y a à débarrasser.</p>
+                </div>
+                <div class="lp-step">
+                    <div class="lp-step-number">2</div>
+                    <h3>On évalue sur place</h3>
+                    <p>On passe voir, on estime la valeur des objets récupérables et on vous fait un devis.</p>
+                </div>
+                <div class="lp-step">
+                    <div class="lp-step-number">3</div>
+                    <h3>On débarrasse tout</h3>
+                    <p>Intervention rapide. On trie, on récupère, on évacue. Vous n'avez rien à faire.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 Types de débarras -->
+    <section class="lp-types">
+        <h2 class="lp-section-title">Nos trois types de <span class="green">débarras</span></h2>
+        <div class="lp-types-grid">
+            <div class="lp-type-card featured">
+                <span class="lp-type-emoji">🆓</span>
+                <h3>Le débarras gratuit</h3>
+                <p>La valeur de revente des objets récupérés couvre le coût de l'intervention. Résultat : <strong>votre débarras est entièrement gratuit.</strong></p>
+            </div>
+            <div class="lp-type-card">
+                <span class="lp-type-emoji">🧾</span>
+                <h3>Le débarras facturé</h3>
+                <p>Les objets ne sont pas valorisables (pas de revente ni recyclage possible). <strong>Le débarras est facturé</strong> au juste prix, sans surprise.</p>
+            </div>
+            <div class="lp-type-card">
+                <span class="lp-type-emoji">💰</span>
+                <h3>Le débarras rémunéré</h3>
+                <p>La valeur des objets dépasse le coût de la prestation (successions, antiquités...). <strong>On vous rémunère la différence.</strong></p>
+            </div>
+        </div>
+        <div class="lp-asso">
+            <span class="lp-asso-icon">🤝</span>
+            <div>
+                <h4>Un engagement solidaire</h4>
+                <p>Quoi qu'il arrive, tout ce qui est récupérable et que vous ne souhaitez pas garder est <strong>donné à des associations</strong>. Rien ne se perd, tout retrouve une seconde vie.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="lp-services">
+        <h2 class="lp-section-title">On s'occupe de <span class="green">tout</span></h2>
+        <div class="lp-services-grid">
+            <div class="lp-service">
+                <span class="lp-service-icon">🏚️</span>
+                <div>
+                    <h4>Appartements & Maisons</h4>
+                    <p>Vidage complet ou partiel</p>
+                </div>
+            </div>
+            <div class="lp-service">
+                <span class="lp-service-icon">🚪</span>
+                <div>
+                    <h4>Caves & Greniers</h4>
+                    <p>Même les accès difficiles</p>
+                </div>
+            </div>
+            <div class="lp-service">
+                <span class="lp-service-icon">🏢</span>
+                <div>
+                    <h4>Locaux professionnels</h4>
+                    <p>Bureaux, commerces, entrepôts</p>
+                </div>
+            </div>
+            <div class="lp-service">
+                <span class="lp-service-icon">🚛</span>
+                <div>
+                    <h4>Encombrants & Gravats</h4>
+                    <p>Évacuation rapide et propre</p>
+                </div>
+            </div>
+            <div class="lp-service">
+                <span class="lp-service-icon">🧽</span>
+                <div>
+                    <h4>Nettoyage fin de chantier</h4>
+                    <p>Un espace prêt à vivre</p>
+                </div>
+            </div>
+            <div class="lp-service">
+                <span class="lp-service-icon">♻️</span>
+                <div>
+                    <h4>Tri & Recyclage</h4>
+                    <p>Démarche éco-responsable</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="lp-form-section" id="devis">
+        <div class="lp-form-inner">
+            <h2>Devis <span class="green">gratuit</span></h2>
+            <p class="lp-form-subtitle">Réponse sous 24h — Sans engagement</p>
+            <form class="lp-form" action="https://formsubmit.co/mizadispo.groupe@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="🔥 Landing Page Débarras - Demande de devis">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="source" value="Google Ads - Landing Débarras">
+
+                <div class="lp-form-row">
+                    <div>
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                    </div>
+                    <div>
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="votre@email.com">
+                </div>
+
+                <div class="lp-form-row">
+                    <div>
+                        <label for="ville">Ville</label>
+                        <input type="text" id="ville" name="ville" placeholder="Ex : Massy" required>
+                    </div>
+                    <div>
+                        <label for="type">Type de lieu</label>
+                        <select id="type" name="type_lieu">
+                            <option value="">Choisir</option>
+                            <option value="appartement">Appartement</option>
+                            <option value="maison">Maison</option>
+                            <option value="cave">Cave / Grenier</option>
+                            <option value="garage">Garage / Box</option>
+                            <option value="local">Local pro</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="description">Décrivez ce qu'il y a à débarrasser</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Ex : Appartement 60m² à vider, meubles anciens, électroménager, vêtements..." required></textarea>
+                </div>
+
+                <button type="submit" class="lp-form-submit">Recevoir mon devis gratuit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="lp-footer">
+        <p>&copy; 2026 MizaDispo Groupe — Débarras & Nettoyage en Île-de-France — <a href="tel:0687299630" style="color: #8BC34A;">06 87 29 96 30</a></p>
+    </footer>
+
+    <!-- Sticky phone (mobile) -->
+    <a href="tel:0687299630" class="lp-sticky-phone">
+        📞 Appeler le 06 87 29 96 30
+    </a>
+
+</body>
+</html>
