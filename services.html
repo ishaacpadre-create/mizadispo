@@ -14,6 +14,12 @@
     <meta name="google-site-verification" content="S_enaoIWLwvZ5xWOOShUn9vrEvjrxlj-tAmxvqmNuIU" />
     <meta name="description" content="MizaDispo Services - Accompagnement personnes âgées et handicapées, aide à domicile, ménage, transport, compagnie en Île-de-France.">
     <meta name="keywords" content="services à la personne, aide à domicile, accompagnement, personnes âgées, handicap, ménage, transport, Orsay">
+    <meta property="og:title" content="Services à la personne - MizaDispo">
+    <meta property="og:description" content="Accompagnement personnes âgées et handicapées, aide à domicile, ménage, transport, compagnie en Île-de-France.">
+    <meta property="og:image" content="https://mizadispo.com/img/logo.png">
+    <meta property="og:url" content="https://mizadispo.com/services.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
     <title>Services à la personne - MizaDispo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +35,7 @@
     <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="img/logo.png" alt="MizaDispo" class="logo-img">
+                <img src="img/logo.png" alt="MizaDispo" class="logo-img" loading="lazy">
                 <span class="logo-text"><span class="logo-miza">Miza</span><span class="logo-dispo">Dispo</span></span>
             </a>
             <nav class="nav" id="nav">
@@ -48,7 +54,7 @@
     </header>
 
     <!-- Hero -->
-    <section class="hero hero-sub" id="accueil">
+    <section class="hero hero-sub" id="accueil" style="background-image: url('img/hero/hero-services.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <p class="hero-tag">MizaDispo Services</p>
@@ -74,57 +80,84 @@
 
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">👴</div>
-                    <h3>Accompagnement personnes âgées</h3>
-                    <p>Présence attentive et bienveillante pour vos proches. Aide au quotidien, compagnie et soutien moral pour un maintien à domicile serein.</p>
+                    <img src="img/services/elderly-care.jpg" alt="Accompagnement personnes âgées" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <div class="service-icon">👴</div>
+                        <h3>Accompagnement personnes âgées</h3>
+                        <p>Présence attentive et bienveillante pour vos proches. Aide au quotidien, compagnie et soutien moral pour un maintien à domicile serein.</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">♿</div>
-                    <h3>Accompagnement personnes handicapées</h3>
-                    <p>Assistance personnalisée et adaptée. Nous vous accompagnons dans toutes vos activités avec respect et professionnalisme.</p>
+                    <img src="img/services/disabled-care.jpg" alt="Accompagnement personnes handicapées" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <div class="service-icon">♿</div>
+                        <h3>Accompagnement personnes handicapées</h3>
+                        <p>Assistance personnalisée et adaptée. Nous vous accompagnons dans toutes vos activités avec respect et professionnalisme.</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">🚗</div>
-                    <h3>Transport & accompagnement</h3>
-                    <p>Courses, rendez-vous médicaux, démarches administratives. Nous vous conduisons où vous en avez besoin, en toute sécurité.</p>
+                    <img src="img/services/transport.jpg" alt="Transport accompagné" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <div class="service-icon">🚗</div>
+                        <h3>Transport & accompagnement</h3>
+                        <p>Courses, rendez-vous médicaux, démarches administratives. Nous vous conduisons où vous en avez besoin, en toute sécurité.</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">🛒</div>
-                    <h3>Aide aux courses</h3>
-                    <p>Accompagnement ou livraison de vos courses. Nous vous aidons à faire vos achats en toute sérénité.</p>
+                    <img src="img/services/shopping.jpg" alt="Courses et achats" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <div class="service-icon">🛒</div>
+                        <h3>Aide aux courses</h3>
+                        <p>Accompagnement ou livraison de vos courses. Nous vous aidons à faire vos achats en toute sérénité.</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">🧹</div>
-                    <h3>Ménage & entretien</h3>
-                    <p>Entretien régulier ou ponctuel de votre domicile. Un intérieur propre et sain, sans effort de votre part.</p>
+                    <img src="img/services/cleaning.jpg" alt="Ménage et entretien" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <div class="service-icon">🧹</div>
+                        <h3>Ménage & entretien</h3>
+                        <p>Entretien régulier ou ponctuel de votre domicile. Un intérieur propre et sain, sans effort de votre part.</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">🤗</div>
-                    <h3>Compagnie pour personnes seules</h3>
-                    <p>Présence chaleureuse, conversations, activités partagées. Rompre l'isolement et apporter du réconfort au quotidien.</p>
+                    <img src="img/services/companionship.jpg" alt="Compagnie et présence" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <div class="service-icon">🤗</div>
+                        <h3>Compagnie pour personnes seules</h3>
+                        <p>Présence chaleureuse, conversations, activités partagées. Rompre l'isolement et apporter du réconfort au quotidien.</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Aide informatique & numérique</h3>
-                    <p>Installation, dépannage, initiation. Nous vous aidons à maîtriser vos outils numériques en toute simplicité.</p>
+                    <img src="img/services/it-help.jpg" alt="Aide informatique" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <div class="service-icon">💻</div>
+                        <h3>Aide informatique & numérique</h3>
+                        <p>Installation, dépannage, initiation. Nous vous aidons à maîtriser vos outils numériques en toute simplicité.</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">🌿</div>
-                    <h3>Jardinage & entretien extérieur</h3>
-                    <p>Tonte, taille, désherbage, entretien de vos espaces verts. Un jardin soigné toute l'année.</p>
+                    <img src="img/services/gardening.jpg" alt="Jardinage et extérieur" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <div class="service-icon">🌿</div>
+                        <h3>Jardinage & entretien extérieur</h3>
+                        <p>Tonte, taille, désherbage, entretien de vos espaces verts. Un jardin soigné toute l'année.</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Petits travaux & bricolage</h3>
-                    <p>Montage de meubles, petites réparations, installations diverses. Des interventions rapides et soignées à domicile.</p>
+                    <img src="img/services/handyman.jpg" alt="Petit bricolage" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <div class="service-icon">🔧</div>
+                        <h3>Petits travaux & bricolage</h3>
+                        <p>Montage de meubles, petites réparations, installations diverses. Des interventions rapides et soignées à domicile.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -195,7 +228,7 @@
                 <form class="contact-form contact-form-detailed" id="contactForm" action="https://formsubmit.co/mizadispo.groupe@gmail.com" method="POST">
                     <input type="hidden" name="_subject" value="Demande de devis - Services à la personne">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="">
+                    <input type="hidden" name="_next" value="https://mizadispo.com/merci.html">
                     <input type="text" name="_honey" style="display:none">
                     <input type="hidden" name="branche" value="Services à la personne">
 
@@ -325,9 +358,9 @@
                 </div>
                 <div class="footer-links">
                     <h4>Légal</h4>
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Politique de confidentialité</a>
-                    <a href="#">CGV</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="mentions-legales.html">Politique de confidentialité</a>
+                    <a href="mentions-legales.html">CGV</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -335,6 +368,8 @@
             </div>
         </div>
     </footer>
+
+    <a href="tel:0687299630" class="floating-phone">&#128222; Appeler le 06 87 29 96 30</a>
 
     <script src="js/main.js"></script>
 </body>

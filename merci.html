@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Merci ! - MizaDispo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .merci-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 24px 80px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #1a2a10 100%);
+        }
+        .merci-content {
+            max-width: 600px;
+        }
+        .merci-icon {
+            font-size: 4rem;
+            margin-bottom: 24px;
+            display: block;
+        }
+        .merci-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .merci-text {
+            color: #ccc;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        .merci-info {
+            background: #2a2a2a;
+            border: 1px solid rgba(139, 195, 74, 0.2);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+        .merci-info p {
+            color: #ccc;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .merci-info p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="MizaDispo" class="logo-img">
+                <span class="logo-text"><span class="logo-miza">Miza</span><span class="logo-dispo">Dispo</span></span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="travaux.html" class="nav-link">Travaux</a>
+                <a href="debarras.html" class="nav-link">Débarras</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="merci-section">
+        <div class="merci-content">
+            <span class="merci-icon">&#10003;</span>
+            <h1 class="merci-title">Merci pour votre <span class="highlight">message</span> !</h1>
+            <p class="merci-text">
+                Votre demande a bien été envoyée. Notre équipe vous recontactera dans les plus brefs délais, généralement sous 24h.
+            </p>
+            <div class="merci-info">
+                <p>&#128222; En cas d'urgence : <strong><a href="tel:0687299630" style="color: #8BC34A;">06 87 29 96 30</a></strong></p>
+                <p>&#128340; Horaires : Lun - Sam, 7h - 20h</p>
+                <p>&#128205; Zone : Toute l'Île-de-France</p>
+            </div>
+            <a href="index.html" class="btn btn-primary">Retour à l'accueil</a>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

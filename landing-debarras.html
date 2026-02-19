@@ -338,12 +338,19 @@
             display: flex;
             align-items: center;
             gap: 14px;
-            padding: 20px;
+            padding: 0;
             background: var(--dark);
             border-radius: 10px;
             border: 1px solid rgba(255,255,255,0.05);
+            overflow: hidden;
         }
-        .lp-service-icon { font-size: 1.6rem; flex-shrink: 0; }
+        .lp-service-img {
+            width: 90px;
+            height: 80px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .lp-service-icon { font-size: 1.6rem; flex-shrink: 0; display: none; }
         .lp-service h4 { font-size: 0.95rem; font-weight: 600; }
         .lp-service p { font-size: 0.85rem; color: var(--gray); margin-top: 2px; }
 
@@ -599,42 +606,42 @@
         <h2 class="lp-section-title">On s'occupe de <span class="green">tout</span></h2>
         <div class="lp-services-grid">
             <div class="lp-service">
-                <span class="lp-service-icon">🏚️</span>
+                <img src="img/debarras/apartment.jpg" alt="Appartements & Maisons" class="lp-service-img" loading="lazy">
                 <div>
                     <h4>Appartements & Maisons</h4>
                     <p>Vidage complet ou partiel</p>
                 </div>
             </div>
             <div class="lp-service">
-                <span class="lp-service-icon">🚪</span>
+                <img src="img/debarras/cave.jpg" alt="Caves & Greniers" class="lp-service-img" loading="lazy">
                 <div>
                     <h4>Caves & Greniers</h4>
                     <p>Même les accès difficiles</p>
                 </div>
             </div>
             <div class="lp-service">
-                <span class="lp-service-icon">🏢</span>
+                <img src="img/debarras/office.jpg" alt="Locaux professionnels" class="lp-service-img" loading="lazy">
                 <div>
                     <h4>Locaux professionnels</h4>
                     <p>Bureaux, commerces, entrepôts</p>
                 </div>
             </div>
             <div class="lp-service">
-                <span class="lp-service-icon">🚛</span>
+                <img src="img/debarras/encombrants.jpg" alt="Encombrants & Gravats" class="lp-service-img" loading="lazy">
                 <div>
                     <h4>Encombrants & Gravats</h4>
                     <p>Évacuation rapide et propre</p>
                 </div>
             </div>
             <div class="lp-service">
-                <span class="lp-service-icon">🧽</span>
+                <img src="img/debarras/post-construction.jpg" alt="Nettoyage fin de chantier" class="lp-service-img" loading="lazy">
                 <div>
                     <h4>Nettoyage fin de chantier</h4>
                     <p>Un espace prêt à vivre</p>
                 </div>
             </div>
             <div class="lp-service">
-                <span class="lp-service-icon">♻️</span>
+                <img src="img/debarras/recycling.jpg" alt="Tri & Recyclage" class="lp-service-img" loading="lazy">
                 <div>
                     <h4>Tri & Recyclage</h4>
                     <p>Démarche éco-responsable</p>
@@ -651,7 +658,7 @@
             <form class="lp-form" action="https://formsubmit.co/mizadispo.groupe@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="🔥 Landing Page Débarras - Demande de devis">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="">
+                <input type="hidden" name="_next" value="https://mizadispo.com/merci.html">
                 <input type="text" name="_honey" style="display:none">
                 <input type="hidden" name="source" value="Google Ads - Landing Débarras">
 
