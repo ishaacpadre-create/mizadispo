@@ -11,8 +11,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'AW-17961578021');
-      // Conversion "Demande de devis" - se déclenche au chargement de la page merci
+      // Conversion "Demande de devis"
       gtag('event', 'conversion', {'send_to': 'AW-17961578021/69lgCLqhw_sbEKXc3_RC'});
+      // Conversion "Formulaire de contact"
+      gtag('event', 'conversion', {'send_to': 'AW-17961578021/YWRyCLTM6PobEKXc3_RC', 'value': 10.0, 'currency': 'EUR'});
+      gtag('event', 'conversion', {'send_to': 'AW-17961578021/2_fUCJDj3P0bEKXc3_RC'});
     </script>
     <title>Merci ! - MizaDispo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,6 +111,16 @@
         </div>
     </section>
 
+    <script>
+      // Tracking conversion appel téléphonique
+      document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17961578021/fnm0CKOk6f0bEKXc3_RC'
+          });
+        });
+      });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
