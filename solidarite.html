@@ -291,7 +291,7 @@
                     // Convertir les liens Google Drive en liens d'image directe
                     if (image.includes('drive.google.com')) {
                         const match = image.match(/\/d\/([a-zA-Z0-9_-]+)/);
-                        if (match) image = 'https://lh3.googleusercontent.com/d/' + match[1];
+                        if (match) image = 'https://drive.google.com/thumbnail?id=' + match[1] + '&sz=w600';
                     }
 
                     const card = document.createElement('div');
