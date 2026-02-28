@@ -317,10 +317,9 @@
                     empty.style.display = 'block';
                 }
             })
-            .catch(err => {
+            .catch(() => {
                 document.getElementById('articles-grid').style.display = 'none';
                 document.getElementById('no-articles').style.display = 'block';
-                document.getElementById('no-articles').innerHTML = '<p style="color:red;">Erreur: ' + err.message + '</p>';
             });
     </script>
 </body>
