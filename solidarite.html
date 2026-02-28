@@ -265,7 +265,9 @@
             .then(r => r.text())
             .then(text => {
                 // Google renvoie du JSONP, on extrait le JSON
-                const json = JSON.parse(text.substring(47).slice(0, -2));
+                const start = text.indexOf('{');
+                const end = text.lastIndexOf('}');
+                const json = JSON.parse(text.substring(start, end + 1));
                 const rows = json.table.rows;
                 const grid = document.getElementById('articles-grid');
                 const empty = document.getElementById('no-articles');
