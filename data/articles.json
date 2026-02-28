@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "titre": "Table en bois massif",
+        "description": "Belle table en chêne, quelques traces d'usure mais très solide. Idéale pour salle à manger.",
+        "prix": 45,
+        "etat": "Bon état",
+        "image": "img/solidarite/exemple.jpg",
+        "date": "2026-02-28"
+    }
+]

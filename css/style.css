@@ -1038,8 +1038,154 @@ img {
     z-index: 0;
 }
 
+/* ===== SOLIDARITE PAGE ===== */
+.solidarite-concept {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.concept-card {
+    background: var(--dark-light);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius);
+    padding: 32px;
+    transition: var(--transition);
+}
+
+.concept-card:hover {
+    border-color: rgba(139, 195, 74, 0.2);
+    transform: translateY(-3px);
+}
+
+.concept-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.concept-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--green);
+}
+
+.concept-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.solidarite-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.step-card {
+    text-align: center;
+    padding: 32px 20px;
+    background: var(--dark-light);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.step-card:hover {
+    border-color: rgba(139, 195, 74, 0.2);
+    transform: translateY(-3px);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--green);
+    color: var(--black);
+    font-size: 1.3rem;
+    font-weight: 800;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.step-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.step-card p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.article-etat {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--green);
+    background: rgba(139, 195, 74, 0.1);
+    padding: 4px 10px;
+    border-radius: 50px;
+}
+
+.article-timer {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.article-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--green);
+    margin-top: 12px;
+}
+
+.solidarite-empty {
+    text-align: center;
+    padding: 60px 24px;
+    background: var(--dark-light);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius);
+}
+
+.empty-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.solidarite-empty h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.solidarite-empty p {
+    color: var(--gray);
+    font-size: 1rem;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
+    .solidarite-concept {
+        grid-template-columns: 1fr;
+    }
+
+    .solidarite-steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .branches-grid {
         grid-template-columns: 1fr;
         max-width: 500px;
@@ -1126,6 +1272,10 @@ img {
 
     .hero-stats {
         gap: 24px;
+    }
+
+    .solidarite-steps {
+        grid-template-columns: 1fr;
     }
 
     .why-grid {
